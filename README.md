@@ -1,16 +1,10 @@
 # find_job
 
-A new Flutter project.
+An Online Course Project Based Learning from BuildWith Angga
+* https://buildwithangga.com/kelas/flutter-developer-provider-state-management
 
-## Getting Started
+## Provider Fundamental
+https://whimsical.com/flutter-provider-8YGf7WKTXcgGx3ALuQ5Xqr
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Figma Design
+https://www.figma.com/file/JEC5Btybyf14lsdquejW8n/Future-Job?node-id=175%3A17
