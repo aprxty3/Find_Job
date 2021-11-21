@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Consumer(
+                  Consumer<GenderProvider>(
                     builder: (context, genderProvider, _) => Text(
                       'Gender Picker',
                       style: TextStyle(
