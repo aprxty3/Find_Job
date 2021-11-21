@@ -1,4 +1,4 @@
-import 'package:find_job/gender_provider.dart';
+import 'package:gender_picker/gender_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -19,11 +19,14 @@ class MyApp extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    'Gender Picker',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w500,
+                  Consumer(
+                    builder: (context, genderProvider, _) => Text(
+                      'Gender Picker',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w500,
+                        color: genderProvider.color,
+                      ),
                     ),
                   ),
                   SizedBox(height: 50),

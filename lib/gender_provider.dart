@@ -10,4 +10,6 @@ class GenderProvider with ChangeNotifier {
     _isMale = newValue;
     notifyListeners();
   }
+
+  get color => _isMale ? Colors.blue : Colors.pink;
 }
