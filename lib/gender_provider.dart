@@ -12,4 +12,6 @@ class GenderProvider with ChangeNotifier {
   }
 
   get color => _isMale ? Colors.blue : Colors.pink;
+  get malecolor => _isMale ? Colors.blue : Colors.grey;
+  get femalecolor => _isMale ? Colors.grey : Colors.pink;
 }

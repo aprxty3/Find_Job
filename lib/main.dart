@@ -33,29 +33,39 @@ class MyApp extends StatelessWidget {
                   Row(
                     children: [
                       Expanded(
-                        child: Container(
-                          height: 150,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.black,
-                            ),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.asset(
-                                'assets/icon_male.png',
-                                height: 80,
-                              ),
-                              Text(
-                                'Male',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w500,
+                        child: Consumer<GenderProvider>(
+                          builder: (context, genderProvider, _) =>
+                              GestureDetector(
+                            onTap: () {
+                              genderProvider.isMale = true;
+                            },
+                            child: Container(
+                              height: 150,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: genderProvider.malecolor,
                                 ),
-                              )
-                            ],
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    'assets/icon_male.png',
+                                    height: 80,
+                                    color: genderProvider.malecolor,
+                                  ),
+                                  Text(
+                                    'Male',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                      color: genderProvider.malecolor,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -63,30 +73,40 @@ class MyApp extends StatelessWidget {
                         width: 20,
                       ),
                       Expanded(
-                        child: Container(
-                            height: 150,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Colors.black,
-                              ),
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  'assets/icon_female.png',
-                                  height: 80,
-                                ),
-                                Text(
-                                  'Female',
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w500,
+                        child: Consumer<GenderProvider>(
+                          builder: (context, genderProvider, _) =>
+                              GestureDetector(
+                            onTap: () {
+                              genderProvider.isMale = false;
+                            },
+                            child: Container(
+                                height: 150,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: genderProvider.femalecolor,
                                   ),
-                                )
-                              ],
-                            )),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      'assets/icon_female.png',
+                                      height: 80,
+                                      color: genderProvider.femalecolor,
+                                    ),
+                                    Text(
+                                      'Female',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w500,
+                                        color: genderProvider.femalecolor,
+                                      ),
+                                    )
+                                  ],
+                                )),
+                          ),
+                        ),
                       ),
                     ],
                   )
